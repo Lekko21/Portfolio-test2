@@ -1,63 +1,93 @@
-*{
- margin: 0;
- padding: 0;
- font-family: sans-serif;   
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
 }
-.hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: #eff4ef;
-
+/*Cuerpo*/
+body {
+    text-align: center;
+    font-family: sans-serif;
+    background: -webkit-linear-gradient(left,rgb(222, 209, 223),rgb(184, 157, 185) 40% );/*En este caso desde izuierdaa(left) , 1er color verde y 2do azul*/
 }
-nav {
+/*Cabecera fija y Navegador con botones*/
+.cabecera {
     display: flex;
-    width: 84%;
-    margin: 0%;
-    padding: 20px 0;
     align-items: center;
     justify-content: space-between;
+    height: 63px;
+    background: black;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+
 }
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
+/*Barra de navegacion*/
+.navbar {
+    display: flex;
+    margin-right: 10px;
 }
-nav ul li {
+
+.logo {/*Caja cabecera*/
+    margin-left: 30px;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    width: 60px;
+    border-radius: 15px 15px;
+}
+
+.navbar a {/*Botones menú cabecera*/
+    display: block;
+    padding: 10px 10px;
+    color: #fff;
+    text-align: center;
+    margin: 15px;/*En este caso "margin" separa los botones de la barra de navegación*/
     text-decoration: none;
-    color: #000;
-    font-weight: bold;
+    text-transform: uppercase;/* especifica el cambio entre mayúsculas y minúsculas del texto de un elemento.*/
+    font-size: 15px;
+    border: 5px royalblue solid;
+    border-radius: 20px;
 }
-nav ul li a:hover{
-    color: darkgreen;
+
+.navbar a:hover {/*Transicion color para botones*/
+    color: #fff;/*color letra "blanco"*/
+    border: 5px  rgb(11, 44, 143) solid;/*Remarco el borde para darle mas visibilidad*/
 }
-.detel{
+/*PANTALLA PRINCIPAL*/
+.principal{
+    display:flex ;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vh;
+}
+
+.presentacion {
     margin-left: 8%;
     margin-top: 15%;
 }
-.detel h1{
-    font-size: 50px;
+
+/*PARA TODOS LOS QUE HAY EN EL HTML*/
+.titulo{
+    font-size: 40px;
     color: #212121;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
+
+.subtitulo{
+    font-size: 25px;
+    font-style: italic;
+}
+
+
 span{
     color: royalblue ;
+}
 
-}
-.detel {
-    color: #555;
-    line-height: 22px;
-}
-.detel a{
-    background: #212121;
-    padding: 10px 18px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #fff;
-    display: inline-block;
-    margin: 30px 0;
-    border-radius: 5px;
-}
+/*Imagen superpuesta que se mueve por el Hover*/
 .images{
     width: 60%;
     height: 80%;
@@ -73,9 +103,143 @@ span{
     transform: translateX(-50%);
     transition: bottom 1s, left 1s;
 }
+
+.images img .galaxia {
+    height: 200%;
+    width: 200%;
+}
+
 .images:hover .galaxia{
     bottom: 60px;
+
 }
 .images:hover .avatar{
     left: 45%;
 }
+
+/*PARA TODAS LAS SECCIONES(2)*/
+.content {
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*ACERCA DE MI*/
+
+.content.acerca {
+    padding: 50px 0;
+    background: url(images/galaxia.png) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;}
+
+/*PORTFOLIO*/
+.portfolio {
+    padding: 50px 0;
+
+}
+
+.box-container {
+    display: flex;/*Necesario para que las cajas queden una alado de la otra*/
+    justify-content: center;
+    flex-wrap: wrap;/*Tambien necesario*/
+}
+
+.box-container .box {
+    height: 400px;
+    width: 350px;
+    background: black;/*color fondo negro caja de carrera*/
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, .3);
+    margin: 20px;
+}
+
+.box-container .box:hover {/*cada recuadro de carrera se levanta y sombrea mas*/
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, .5);
+    transform: translateY(-3%);
+}
+
+.box-container .box img {/*Para modificar IMG de las carreras dentro de las cajas*/
+    height: 65%;
+    width: 80%;
+    border-radius: 80px 20px;
+    margin-top: 5%;
+}
+
+.box-container .box h3 {/*Texto h3 de la carreras dentro de las cajas*/
+    font-size: 13px;
+    color: rgb(185, 174, 174);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 40px;
+    border-radius: 25px;
+    border: 2px royalblue solid;
+    color: #fff;
+    text-decoration: none;
+    background: rgb(11, 44, 143);
+}
+
+.btn:hover {
+    background: none;
+}
+
+ /*El footer*/
+
+ .footer {
+    background: url(images/galaxia.png) no-repeat center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .footer-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 3%;
+    align-items: space-around;
+    text-align: center;
+    color: black;
+  
+  }
+  
+  .social-network a {
+    text-decoration: none;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #314652;
+    color: #f1f1f1;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    transition: all .4s ease-in-out;
+    animation-name: botonAnima;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+  }
+  
+  @keyframes botonAnima {
+    0% {color: white}
+    20% {color: orange;}
+    40% {color: blue;}
+    60% {color: pink }
+    80% {color: red;}
+    100% {color: white;}
+  }
+  
+  .social-network a:hover {
+    transform: scale(1.2);
+  }
+  

@@ -4,32 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Personal </title>
+    <title>Pagina Web Personal </title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<div class="hero">
-    <nav>
-        <img src="images/leko.jpg" class="logo">
-        <ul>
-    <li><a href="#">HOME</a></li>
-    <li><a href="#">Conocimientos</a></li>
-    <li><a href="#">Acerca de mi</a></li>
-    <li><a href="#">Contacto</a></li>
-        </ul>
-    </nav>
-    <div class="detel">
-        <h1> Hola soy  Correa <span> Leandro </span></h1>
-        <p>Bienvenidos a mi Portfolio
-    </p>
-    <a href="#">Portfolio</a>
+    <div class="cabecera">
+
+        <div class="logo">        
+            <img src="images/lekoo.png" class="logo">
+        </div>
+
+        <nav class="navbar">        
+            <a href="#principal">Principal</a>
+            <a href="#acerca">Acerca de mi</a>
+            <a href="#portfolio">Portfolio</a>
+        </nav> 
+
     </div>
-    <div class="images">
-        <img src="images/galaxia.png" class="galaxia"> 
-        <img src="images/avatar.png" class="avatar"> 
-    </div>
+
+    <header class="principal" id="principal">
+        <div class="presentacion" id="presentacion">
+            <br><br><br><br>
+            <h1 class="titulo"> Bienvenidos a mi Web Personal , soy <span> Correa Leandro </span> </h1>
+            <h2 class="subtitulo">Página para Técnicas Avanzadas de Programación</h2>
+
+        </div>
+        <div class="images">
+            <img src="images/galaxia.png" class="galaxia"> 
+            <img src="images/avatar.png" class="avatar"> 
+        </div>
+
+    </header>
+   
+    <section class="content acerca" id="acerca">
+        <article class="contain">
+
+            <h1 class="titulo">Acerca de mí</h1><h2 class="subtitulo">Soy estudiante de 3ro de la carrera de Desarrollo de sotfware en el IES 
+                Coviello con básicos conocimientos en Java , C# , MySql , Html , Css y Pseint.</h2>           
+        </article>
+   </section>
+
+    <section class="content portfolio" id="portfolio">
+        <h1 class="titulo" id="portfolio">Portfolio</h1>
+        <h2 class="subtitulo">Algunos trabajos realizados para distintas clases.</h2>
+         <div class="box-container">
+ 
+            <div class="box">
+                <img src="images/appInventorLogo.png" class="imgPortfolio">
+                <h3 class="titulin">Aplicación que suma una cantidad de productos desarrollada en AppInventor para móviles.</h3>
+                <a href="#" class="btn">Link</a>
+            </div>
+            <div class="box">
+                <img src="images/HtmlCssLogo.jpeg" class="imgPortfolio">
+                <h3 class="titulin">Práctica mas extensa con Html y Css para el IES Coviello sobre una página web educativa.</h3>
+                <a href="#" class="btn">Link</a>
+            </div>
+            <div class="box">
+                <img src="images/cshark.png" class="imgPortfolio">
+                <h3 class="titulin">Máquina que da vueltos de acuerdo a ciertos montos fijos .</h3>
+                <a href="#" class="btn">Link</a>
+            </div>
+         </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content" id="footer">
+        <h2>©Coviello 2023  ©Leco</h2>
+        </div>
+        <div class="social-network">
+          <a href="https://institutocoviello-tuc.infd.edu.ar/sitio/" class="fa fa-google" target="_blank"></a>
+     
+        </div>
+    </footer>
     
-    
-</div>
 </body>
 </html>
