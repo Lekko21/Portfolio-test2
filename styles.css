@@ -35,10 +35,26 @@ body {
 }
 
 .logo img {
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     border-radius: 15px 15px;
+    border: 3px white solid;
+    animation-name: botonAnimaLogo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
 }
+
+@keyframes botonAnimaLogo {
+    0% {border: 5px white solid;}
+    20% {border: 5px orange solid;}
+    40% {border: 5px blue solid;}
+    60% {border: 5px pink solid ;}
+    80% {border: 5px red solid;}
+    100% {border: 5px white solid;}
+    background: -webkit-linear-gradient{45deg,blue,green, red};
+    /*Robar a Sanchez: bac*/
+  }
 
 .navbar a {/*Botones menú cabecera*/
     display: block;
@@ -85,6 +101,10 @@ body {
 
 span{
     color: royalblue ;
+}
+
+span:hover {
+    color: rgb(7, 35, 119);
 }
 
 /*Imagen superpuesta que se mueve por el Hover*/
@@ -193,7 +213,8 @@ span{
  /*El footer*/
 
  .footer {
-    background: url(images/galaxia.png) no-repeat center;
+    /*background: url(images/galaxia.png) no-repeat center;*/
+    background: black;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -208,7 +229,7 @@ span{
     padding: 3%;
     align-items: space-around;
     text-align: center;
-    color: black;
+    color: white;
   
   }
   
